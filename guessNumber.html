@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 連結bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        /* .css-selector {
+            background: linear-gradient(246deg, #9dd4ab, #a08fca);
+            background-size: 400% 400%;
+            -webkit-animation: AnimationName 30s ease infinite;
+            -moz-animation: AnimationName 30s ease infinite;
+            -o-animation: AnimationName 30s ease infinite;
+            animation: AnimationName 30s ease infinite;
+        } */
+
+        @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+        @-webkit-keyframes AnimationName {
+            0% {
+                background-position: 56% 0%
+            }
+
+            50% {
+                background-position: 45% 100%
+            }
+
+            100% {
+                background-position: 56% 0%
+            }
+        }
+
+        @-moz-keyframes AnimationName {
+            0% {
+                background-position: 56% 0%
+            }
+
+            50% {
+                background-position: 45% 100%
+            }
+
+            100% {
+                background-position: 56% 0%
+            }
+        }
+
+        @-o-keyframes AnimationName {
+            0% {
+                background-position: 56% 0%
+            }
+
+            50% {
+                background-position: 45% 100%
+            }
+
+            100% {
+                background-position: 56% 0%
+            }
+        }
+
+        @keyframes AnimationName {
+            0% {
+                background-position: 56% 0%
+            }
+
+            50% {
+                background-position: 45% 100%
+            }
+
+            100% {
+                background-position: 56% 0%
+            }
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            /* background-color: sandybrown; */
+            font-family: 'DotGothic16', sans-serif;
+
+        }
+
+        body {
+            background: linear-gradient(0deg, #202989, #5d38c0, #e37b2b, #73ebea);
+            background-size: 800% 800%;
+            -webkit-animation: AnimationName 30s ease infinite;
+            -moz-animation: AnimationName 30s ease infinite;
+            -o-animation: AnimationName 30s ease infinite;
+            animation: AnimationName 30s ease infinite;
+
+
+        }
+
+
+        #div1 {
+            margin: 100px auto;
+            width: 70%;
+            height: 70%;
+            /* border: 3px solid blue; */
+            background-color: #e0e5ec;
+            padding: 50px 0px;
+            border-radius: 5px;
+
+        }
+
+        #title {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #subtitle {
+            margin: 0 20px;
+
+        }
+
+        #cSpace {
+            margin-left: 30%
+        }
+
+        .num {
+            /* margin: 0px auto; */
+            text-align: center;
+            font-size: 20px;
+            width: 150px;
+        }
+
+        #inputText {
+            /* border: 3px solid red; */
+            width: 100%;
+
+        }
+
+        .row {
+            /* border: 3px solid yellow; */
+            margin: 0 20px;
+        }
+
+        .col {
+            /* border: 3px solid blueviolet; */
+            text-align: center;
+
+        }
+
+        #btn {
+            margin: 20px 0px 10px 0px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+
+        .custom-btn {
+            width: 130px;
+            height: 40px;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px 25px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+            outline: none;
+        }
+
+        /* r1 */
+        .btn-r1 {
+            background-color: #73ebea;
+            background-image: linear-gradient(315deg, #def191 0%, #73ebea 74%);
+            line-height: 42px;
+            padding: 0;
+            border: none;
+        }
+
+        .btn-r1 span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn-r1:before,
+        .btn-r1:after {
+            position: absolute;
+            content: "";
+            right: 0;
+            bottom: 0;
+            background: #73ebea;
+            /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+            transition: all 0.3s ease;
+        }
+
+        .btn-r1:before {
+            height: 0%;
+            width: 2px;
+        }
+
+        .btn-r1:after {
+            width: 0%;
+            height: 2px;
+        }
+
+        .btn-r1:hover:before {
+            height: 100%;
+        }
+
+        .btn-r1:hover:after {
+            width: 100%;
+        }
+
+        .btn-r1:hover {
+            background: transparent;
+        }
+
+        .btn-r1 span:hover {
+            color: #73ebea;
+        }
+
+        .btn-r1 span:before,
+        .btn-r1 span:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background: #73ebea;
+            /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+            transition: all 0.3s ease;
+        }
+
+        .btn-r1 span:before {
+            width: 2px;
+            height: 0%;
+        }
+
+        .btn-r1 span:after {
+            height: 2px;
+            width: 0%;
+        }
+
+        .btn-r1 span:hover:before {
+            height: 100%;
+        }
+
+        .btn-r1 span:hover:after {
+            width: 100%;
+        }
+
+
+        /* btn-guess */
+        .btn-guess {
+            background-color: #e37b2b;
+            background-image: linear-gradient(315deg, #9ce32b 0%, #e37b2b 74%);
+            line-height: 42px;
+            padding: 0;
+            border: none;
+        }
+
+        .btn-guess span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn-guess:before,
+        .btn-guess:after {
+            position: absolute;
+            content: "";
+            right: 0;
+            bottom: 0;
+            background: #e37b2b;
+            /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+            transition: all 0.3s ease;
+        }
+
+        .btn-guess:before {
+            height: 0%;
+            width: 2px;
+        }
+
+        .btn-guess:after {
+            width: 0%;
+            height: 2px;
+        }
+
+        .btn-guess:hover:before {
+            height: 100%;
+        }
+
+        .btn-guess:hover:after {
+            width: 100%;
+        }
+
+        .btn-guess:hover {
+            background: transparent;
+        }
+
+        .btn-guess span:hover {
+            color: #e37b2b;
+        }
+
+        .btn-guess span:before,
+        .btn-guess span:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background: #e37b2b;
+            /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+            transition: all 0.3s ease;
+        }
+
+        .btn-guess span:before {
+            width: 2px;
+            height: 0%;
+        }
+
+        .btn-guess span:after {
+            height: 2px;
+            width: 0%;
+        }
+
+        .btn-guess span:hover:before {
+            height: 100%;
+        }
+
+        .btn-guess span:hover:after {
+            width: 100%;
+        }
+
+        /* btn-dealer */
+        .btn-dealer {
+            background-color: #5d38c0;
+            background-image: linear-gradient(315deg, #e392c7 0%, #5d38c0 74%);
+            line-height: 42px;
+            padding: 0;
+            border: none;
+        }
+
+        .btn-dealer span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn-dealer:before,
+        .btn-dealer:after {
+            position: absolute;
+            content: "";
+            right: 0;
+            bottom: 0;
+            background: #5d38c0;
+            /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+            transition: all 0.3s ease;
+        }
+
+        .btn-dealer:before {
+            height: 0%;
+            width: 2px;
+        }
+
+        .btn-dealer:after {
+            width: 0%;
+            height: 2px;
+        }
+
+        .btn-dealer:hover:before {
+            height: 100%;
+        }
+
+        .btn-dealer:hover:after {
+            width: 100%;
+        }
+
+        .btn-dealer:hover {
+            background: transparent;
+        }
+
+        .btn-dealer span:hover {
+            color: #5d38c0;
+        }
+
+        .btn-dealer span:before,
+        .btn-dealer span:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background: #5d38c0;
+            /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+            transition: all 0.3s ease;
+        }
+
+        .btn-dealer span:before {
+            width: 2px;
+            height: 0%;
+        }
+
+        .btn-dealer span:after {
+            height: 2px;
+            width: 0%;
+        }
+
+        .btn-dealer span:hover:before {
+            height: 100%;
+        }
+
+        .btn-dealer span:hover:after {
+            width: 100%;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #square1 {
+            margin: 20px 0px;
+            /* border: 3px solid black; */
+            width: 70%;
+            height: 200px;
+            box-shadow: 0px 0px 15px rgb(133, 151, 169);
+        }
+
+        #square2 {
+            margin: 20px 0px;
+            border: 1px solid rgb(46, 46, 46);
+            width: 50%;
+            height: 50px;
+            /* box-shadow: 0px 0px 15px rgb(133, 151, 169); */
+        }
+
+
+        .winning-message {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+            font-size: 5rem;
+        }
+
+        .winning-message.show {
+            display: flex;
+        }
+
+        #reset2 {
+            font-size: 3rem;
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: .25em .5em;
+            cursor: pointer;
+        }
+
+        #reset2:hover {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container" id="div1">
+            <header>
+                <h1 id="title">猜數字遊戲</h1>
+            </header>
+
+            <button type="button" class="custom-btn btn-r1" id="reset1" style="margin-left:5%; margin-bottom: 20px; "
+                onclick="reset1()"><span>重新開始</span></button>
+            <span id="cSpace"></span>
+
+
+
+
+
+            <div class="row">
+                <div class="col">
+                    <input type="number" class="num" id="n0" name="n0" maxlength="1" min="1" max="10"
+                        onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+                </div>
+                <div class="col">
+                    <input type="number" class="num" id="n1" name="n1" maxlength="1" min="1" max="10"
+                        onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+                    <!--  onmousemove="check()" -->
+                </div>
+                <div class="col">
+                    <input type="number" class="num" id="n2" name="n2" maxlength="1" min="1" max="10"
+                        onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+                </div>
+                <div class="col">
+                    <input type="number" class="num" id="n3" name="n3" maxlength="1" min="1" max="10"
+                        onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+                </div>
+                <div class="col">
+                    <input type="number" class="num" id="n4" name="n4" maxlength="1" min="1" max="10"
+                        onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');">
+                </div>
+            </div>
+            <div id="btn">
+                <button type="button" class="custom-btn btn-guess" id="guessResult"><span>檢視猜測結果</span></button>
+                <!-- onclick="sIpNum(); dIpNum(); -->
+
+            </div>
+
+            <div class="flex" id="flex1">
+                <div id="square1">
+                    <h1 id="ipNum"></h1>
+                </div>
+            </div>
+
+            <div id="btn">
+                <button type="button" class="custom-btn btn-dealer" id="showNum"><span>顯示莊家數字</span></button>
+                <!-- onmousedown="sDlNum()" onmouseup="dDlNum()" -->
+            </div>
+
+            <div class="flex" id="flex2">
+                <div id="square2">
+                    <h3 id="dlNum"></h3>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="winning-message" id="winningMessage">
+        <div class="data-winning-message-text">WOW~你贏了!<br>超棒的!</div>
+        <button id="reset2" onclick="reset2()">重新開始</button>
+    </div>
+
+
+
+
+
+    <script>
+        //arr1為隨機數
+        var arr1 = [];
+        var n;
+        const winningMessageElement = document.getElementById("winningMessage").classList;
+        //把玩家輸入的數字放到陣列裡
+        arr2 = [];
+        ///arrCorrect放對的值
+        var arrCorrect = [];
+        ///arrFalse放錯的值
+        var arrFalse = [];
+
+
+
+
+
+
+        //隨機取亂數放到arr1            
+        //宣告紀錄值
+        while (arr1.length < 5) {
+            n = Math.floor(Math.random() * 10);
+            if (arr1.indexOf(n) === -1) {
+                arr1.push(n);
+                arr1.sort();
+            }
+        } console.log(`arr1=${arr1}`);
+        //////////////////////////////////////
+
+        let cSpace = document.getElementById("cSpace");
+        let numbers = document.querySelectorAll("input[type=number]");
+        //這樣arr2會無限延伸
+
+        for (let i = 0; i < numbers.length; i++) {
+            numbers[i].onchange = function () {
+                let niS = numbers[i].value;
+                let ni = parseInt(niS);
+                ///判斷ni是否大於0//yes
+                if (ni >= 0 && ni <= 9) {
+                    ///判斷ni有沒有重複過//yes
+                    //if(arr2.includes(ni)==false)
+                    if (arr2.indexOf(ni) === -1) {
+                        arr2.push(ni);
+                        arr2.sort();
+                        // cSpace.innerHTML = `arr2=${arr2}   ni=${ni} typeof ni=${typeof ni}`;
+                        compare();
+                    }
+                    //no
+                    else {
+                        if (arrCorrect.indexOf(ni) === -1 || arrFalse.indexOf(ni) === -1) {
+                            cSpace.innerHTML = `重複輸入,請輸入不同的數字(0~9)`;
+                            //document.getElementById("n0").disabled = true;
+                            ////鎖number格子
+                            let numbers = document.querySelectorAll("input[type=number]");
+                            for (let i = 0; i < numbers.length; i++) {
+                                numbers[i].disabled = true;
+                            }
+                            ////過3秒,恢復number格子
+                            setTimeout(disappear, 3000);
+                        }
+
+                    }
+                }
+                //no
+                else {
+                    cSpace.innerHTML = `超過範圍,請輸入0~9的數字`;
+                    //document.getElementById("n0").disabled = true;
+                    ////鎖number格子
+                    let numbers = document.querySelectorAll("input[type=number]");
+                    for (let i = 0; i < numbers.length; i++) {
+                        numbers[i].disabled = true;
+                    }
+                    ////過3秒,恢復number格子
+                    setTimeout(disappear, 3000);
+                }
+                console.log(`arrCorrect=${arrCorrect} arrFalse=${arrFalse}`);
+                console.log(`arr2=${arr2}`);
+
+            }
+        }
+
+
+
+        ////處理arrCorrect & arrFalse
+        //比對arr1,arrCorrec裡面的值是否相同
+        function compare() {
+            for (var i = 0; i < arr1.length; i++) {
+                //if arr2裡的數值不在arr1裡
+                if (arr1.indexOf(arr2[i]) !== -1) {
+                    //if arr2裡的數值不在arrCorrect裡
+                    if (arrCorrect.indexOf(arr2[i]) === -1) {
+                        //arrCorrect放入arr2的數值
+                        arrCorrect.push(arr2[i]);
+                        //排arrCorrect裡的數值
+                        arrCorrect.sort();
+
+                        //如果arr1==arrCorrect, winningMessageElement的class加上show
+                        if (JSON.stringify(arr1) == JSON.stringify(arrCorrect)) {
+                            console.log(`arr1 == arrCorrect`);
+                            winningMessageElement.add("show");
+                        }
+                    }
+                }
+                else {
+                    //if arr2的數值不為 undefined or ""
+                    if (arr2[i] !== undefined || "") {
+                        //if arr2裡的數值不在arrFalse裡
+                        if (arrFalse.indexOf(arr2[i]) === -1) {
+                            //arrFalse放入arr2的數值
+                            arrFalse.push(arr2[i]);
+                            //排arrFalse裡的數值
+                            arrFalse.sort();
+                        }
+                    }
+
+                    //console.log(`arrFalse = ${arrFalse}`);
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        function disappear() {
+            let cSpace = document.getElementById("cSpace");
+            let numbers = document.querySelectorAll("input[type=number]");
+            ///清除cSpace的文字
+            cSpace.innerHTML = ``;
+            ///恢復number格子
+            for (let i = 0; i < numbers.length; i++) {
+                numbers[i].disabled = false;
+                //清除輸入的數字
+                //numbers[i].value = "";
+            }
+            // document.getElementById("n0").disabled = false;
+        }
+
+
+        //用jQuery的toggle()來顯示/隱藏輸入值的資訊
+        $("#guessResult").click(function () {
+            document.getElementById("ipNum").innerHTML = (`您輸入過的數字: ${arr2}<br> 您猜中的數字:${arrCorrect}<br>您猜錯的數字:${arrFalse}`);
+            $("#ipNum").toggle();
+        });
+
+
+        // function sIpNum() {
+
+        //     document.getElementById("ipNum").innerHTML = (`您輸入過的數字: ${arr2}<br> 您猜中的數字:${arrCorrect}<br>您猜錯的數字${arrFalse}`);
+        // }
+        // function dIpNum() {
+        //     document.getElementById("ipNum").innerHTML = (``);
+        // }
+
+
+        //用jQuery的toggle()來顯示/隱藏輸莊家數值的資訊
+        $("#showNum").click(function () {
+            document.getElementById("dlNum").innerHTML = (`莊家的數字: ${arr1}`);
+            $("#dlNum").toggle();
+        });
+        // function sDlNum() {
+        //     document.getElementById("showNum").innerHTML = (`隱藏莊家數字`);
+        //     document.getElementById("dlNum").innerHTML = (`莊家的數字: ${arr1}`);
+        // }
+        // function dDlNum() {
+        //     document.getElementById("showNum").innerHTML = (`顯示莊家數字`);
+        //     document.getElementById("dlNum").innerHTML = (``);
+        // }
+
+
+
+
+
+        function reset1() {
+            document.location.reload();
+        }
+        function reset2() {
+            document.location.reload();
+            //var winningMessageElement = document.getElementById("winningMessage");
+            winningMessageElement.remove("show");
+        }
+
+
+        //去除Input裡相同的值
+        // function checkName(data) {
+        //     var num = document.getElementsByClassName("num");
+        //     var value = "";
+        //     num.each(function (i, item) {
+        //         var value = this.value;
+        //         value += value;
+        //     })
+        //     var val = num.value;
+        //     var newValue = value.replace(val, "");
+        //     if (newValue == "") {
+        //         return false;
+        //     } else {
+        //         if (newValue.indexOf(val) > -1) {
+        //             alert("重複");
+        //             num.value = ("");
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
